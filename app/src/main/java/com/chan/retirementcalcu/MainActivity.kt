@@ -1,5 +1,6 @@
 package com.chan.retirementcalcu
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var interestRate: EditText
     lateinit var age: EditText
     lateinit var retirementAge: EditText
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -46,8 +48,7 @@ class MainActivity : AppCompatActivity() {
             if(retireAge <= ageRate){
                 Analytics.trackEvent("wrong age")
             }
-
-            textview.text = "result for calculating "
+            textview.text = "result for calculating $intRate"
         }
 
     }
