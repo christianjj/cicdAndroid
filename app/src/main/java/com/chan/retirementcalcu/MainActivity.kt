@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
                 Analytics.trackEvent("wrong age")
             }
 
-
+            textview.text = "result for calculating "
         }
 
     }
